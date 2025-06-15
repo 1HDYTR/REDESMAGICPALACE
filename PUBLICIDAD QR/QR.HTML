@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redes Sociales | Magic Palace</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <meta name="description" content="Síguenos en nuestras redes y deja que la suerte se convierta en magia.">
+  <meta property="og:title" content="Magic Palace - Redes Sociales" />
+  <meta property="og:description" content="Síguenos en nuestras redes y deja que la suerte se convierta en magia." />
+  <meta property="og:image" content="URL_de_tu_imagen_destacada.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      padding: 0 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hi-image {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: white;
+      box-shadow: 0 0 20px 4px #ffffff;
+      animation: floatImage 3s ease-in-out infinite, rainbowGlow 5s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    @keyframes floatImage {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+
+    @keyframes rainbowGlow {
+      0% { box-shadow: 0 0 20px 4px #ffcc00; }
+      25% { box-shadow: 0 0 20px 4px #e73c7e; }
+      50% { box-shadow: 0 0 20px 4px #23a6d5; }
+      75% { box-shadow: 0 0 20px 4px #23d5ab; }
+      100% { box-shadow: 0 0 20px 4px #ffcc00; }
+    }
+
+    .social-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      margin-top: 260px; /* MÁS espacio para evitar superposición con la imagen */
+      z-index: 5;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideUp 1.8s ease forwards;
+    }
+
+    .social-box h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 26px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .social-button:hover {
+      transform: scale(1.1);
+    }
+
+    .social-button:focus {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    .facebook { background-color: #3b5998; }
+    .x-twitter { background-color: #000000; }
+    .tiktok { background-color: #010101; }
+    .instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    .youtube { background-color: #FF0000; }
+    .whatsapp { background-color: #25D366; }
+
+    @media (min-width: 600px) {
+      .social-button {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+      }
+    }
+
+    .slogan {
+      margin-top: 80px; /* espacio mayor debajo del cuadro */
+      font-weight: bold;
+      font-size: 1.8rem;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      font-family: 'Dancing Script', cursive;
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px 20px;
+      border-radius: 10px;
+      animation: fadeSlideUp 2s ease forwards, pulseGlow 3s ease-in-out infinite;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.3), 0 0 6px rgba(0, 0, 0, 0.25);
+    }
+
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.3), 0 0 6px rgba(0, 0, 0, 0.25);
+      }
+      50% {
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 600px) {
+      .slogan {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="hi.png" alt="Logo de Magic Palace" class="hi-image" loading="lazy" />
+
+  <div class="social-box">
+    <h2>Síguenos</h2>
+    <div class="icon-container">
+      <a class="social-button facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a class="social-button x-twitter" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+      <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a class="social-button instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="social-button youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a class="social-button whatsapp" href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <div class="slogan">
+    MAGIC PALACE, DONDE LA SUERTE SE CONVIERTE EN MAGIA
+  </div>
+
+  <footer>
+    © 2025 1HDYR JGBI. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
